@@ -1,11 +1,33 @@
 function addCalc(a,b){
-    
     if(typeof a!=="number" || typeof b!=="number"){
         return a+b;
     }
     let max=calcMax(a,b);
     return (a*max+b*max)/max;
     
+}
+function minusCalc(a,b){
+    if(typeof a!=="number" || typeof b!=="number"){
+        return a-b;
+    }
+    let max=calcMax(a,b);
+    return (a*max-b*max)/max;
+}
+
+function multCalc(a,b){
+    if(typeof a!=="number" || typeof b!=="number"){
+        return a*b;
+    }
+    let max=calcMax(a,b);
+    return ((a*max)*(b*max))/max;
+}
+
+function diviCalc(a,b){
+    if(typeof a!=="number" || typeof b!=="number"){
+        return a/b;
+    }
+    let max=calcMax(a,b);
+    return ((a*max)/(b*max))/max;
 }
 
 function calcDecimalLength(decimal){
@@ -25,5 +47,8 @@ function calcMax(a,b){
 
 
 module.exports={
-    addCalc
+    addCalc,
+    minusCalc,
+    multCalc,
+    diviCalc
 }
